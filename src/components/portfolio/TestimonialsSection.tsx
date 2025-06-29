@@ -9,7 +9,6 @@ interface Testimonial {
   content: string;
   author: string;
   role: string;
-  company: string;
   rating: number;
   project: string;
   avatar: string;
@@ -29,44 +28,40 @@ interface FeaturedTestimonialProps {
 
 const testimonials = [
   {
-    content: "Ramzan is great! He is very skillful and fast learner, just what you need in a developer.",
-    author: "Mohammed Swellam",
-    role: "CEO",
-    company: "Geeky Air",
+    content: "Mihir is one of those developers you can count on when things get tough. He quickly diagnosed a performance issue in our Java application that had stumped others, and implemented a clean, effective solution.",
+    author: "Sneha Kulkarni",
+    role: "Senior Software Engineer",
     rating: 5,
-    project: "Events based Web App",
-    avatar: "MS",
+    project: "Java Application Debugging",
+    avatar: "SK",
     featured: true
   },
   {
-    content: "Ramzan produced some really amazing work on the backend. He demonstrated his proficiency and efficiency by using Node.js and Javascript to successfully import a very large dataset into a MySQL database.",
-    author: "Arnel Bisnar",
-    role: "Product Manager",
-    company: "Solid Lift Parts Inc",
+    content: "Working with Mihir was a breeze. As the project lead, he managed the roadmap, kept everyone aligned, and made sure deadlines were met without compromising quality. A natural at project management.",
+    author: "Rahul Mehra",
+    role: "Product Owner",
     rating: 5,
-    project: "Backend Development",
-    avatar: "AB"
+    project: "Power BI Dashboard Launch",
+    avatar: "RM"
   },
   {
-    content: "It's been great to work with him! Fast, active and hardworking! Ramzan architected checkersvip.com from ground up with great attention to detail and great design. He is a great team player and a great developer.",
-    author: "Gilberto Cisneros",
-    role: "CEO",
-    company: "Checkersvip.com",
+    content: "Mihir created dashboards that made our data actually useful. What impressed me most was how quickly he understood the business problem and translated it into visuals that made sense to everyone on the team.",
+    author: "Pooja Iyer",
+    role: "HR Manager",
     rating: 5,
-    project: "JavaScript Applications",
-    avatar: "MR"
+    project: "HR Analytics in Power BI",
+    avatar: "PI"
   },
   {
-    content: "We had a fantastic experience working with him on a recent project. He consistently delivered high-quality work, showed exceptional attention to detail, and communicated effectively throughout the process.",
-    author: "Jacek Jllaskowski",
-    role: "Project Manger ",
-    company: "Golem",
+    content: "He took complete ownership of the Java microservices migration. From planning to implementation, Mihir was hands-on, technically sound, and always ready to support others. He’s a solid team player.",
+    author: "Aniket Joshi",
+    role: "Engineering Manager",
     rating: 5,
-    project: "Full Stack Development",
-    avatar: "ED"
-  },
-
+    project: "Java Microservices Migration",
+    avatar: "AJ"
+  }
 ];
+
 
 const TestimonialCard = ({ testimonial, index, isHovered, onHover }: TestimonialCardProps) => {
   const gradients = [
@@ -161,9 +156,6 @@ const TestimonialCard = ({ testimonial, index, isHovered, onHover }: Testimonial
                 <div className="text-gray-600 dark:text-gray-400 text-sm font-medium">
                   {testimonial.role}
                 </div>
-                <div className="text-gray-500 dark:text-gray-500 text-sm">
-                  {testimonial.company}
-                </div>
               </div>
             </div>
 
@@ -237,7 +229,7 @@ const FeaturedTestimonial = ({ testimonial }: FeaturedTestimonialProps) => (
             {testimonial.author}
           </div>
           <div className="text-gray-600 dark:text-gray-400">
-            {testimonial.role} at {testimonial.company}
+            {testimonial.role}
           </div>
 
         </div>

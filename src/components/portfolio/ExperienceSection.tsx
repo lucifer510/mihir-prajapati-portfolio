@@ -6,37 +6,37 @@ import SectionHeader from "./SectionHeader";
 
 const experience = [
   {
-    role: "Software Developer",
-    company: "Upwork",
-    period: "January 2020 — Present",
-    type: "Freelance",
-    companyIcon: "fa6-brands:square-upwork",
+    role: "Java Developer",
+    company: "Valens Datalabs Pvt. Ltd.",
+    period: "January 2024 — June 2024",
+    type: "Internship",
+    companyIcon: "fa-building",
     companyColor: "from-green-500 to-green-600",
-    description: "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
+    description: "Contributed by building scalable, secure and reliable REST APIs for ensure seamless communication between frontend and AI model.",
     achievements: [
       "Achieved Top-Rated status with a 91% job success score",
-      "Completed 10+ projects focusing on scalable solutions",
+      "Resolved 50+ bugs focusing on Optimized solutions",
       "Consistently praised for skillfulness, quick learning, and strong communication",
       "Earned repeated engagements through reliability and expertise"
     ],
-    technologies: ["JavaScript", "Python", "Node.js", "AWS", "GCP", "OpenAI API", "LangChain"]
+    technologies: ["Java", "AWS", "Postgresql", "Elastic Search", "Postman", "Slack", "Spring Boot"]
   },
   {
-    role: "HIMS Master Trainer / PACS Specialist",
-    company: "Public Health Organization, Islamabad",
-    period: "July 2019 — Present",
-    type: "Full-time",
-    companyColor: "from-blue-500 to-blue-600",
-    companyIcon: "mdi:hospital-building",
-    description: "Spearheaded organizational transformation from paper-based manual systems to completely integrated HIMS and PACS (Picture Archiving and Communication System).",
-    achievements: [
-      "Led integration of 45+ radiology machines (CT, MRI, X-Ray, Ultrasound)",
-      "Ensured active monitoring for integration issues",
-      "Acted as master trainer and led support team",
-      "Communicated issues and requirements to backend teams"
-    ],
-    technologies: ["HIMS", "PACS", "System Integration", "Healthcare IT", "Training & Support"]
-  }
+  role: "Quality Assurance Engineer",
+  company: "FotonVR Pvt. Ltd.",
+  period: "January 2025 — Present",
+  type: "Full-time",
+  companyColor: "from-blue-500 to-blue-600",
+  companyIcon: "mdi:office-building",
+  description: "Led QA efforts at FotonVR as the Head Quality Analyst, focusing on ensuring application stability and preventing critical bugs from reaching production.",
+  achievements: [
+    "Led a QA team of 5, effectively managing task distribution, reviews, and process improvements",
+    "Identified and resolved high-impact bugs that could have resulted in monetary and reputational loss",
+    "Applied strong analytical skills to test VR-based educational applications across various modules",
+    "Established quality standards and workflows to streamline testing processes"
+  ],
+  technologies: ["Manual Testing", "Bug Tracking", "Team Management", "Documentation", "Quality Assurance"]
+}
 ];
 
 export default function ExperienceSection() {
@@ -266,7 +266,7 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200/30 dark:border-blue-800/20 hover:border-blue-300/50 dark:hover:border-blue-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">5+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">2+</div>
               <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Years Experience</div>
             </motion.div>
 
@@ -274,7 +274,7 @@ export default function ExperienceSection() {
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/50 to-green-100/30 dark:from-green-950/20 dark:to-green-900/10 border border-green-200/30 dark:border-green-800/20 hover:border-green-300/50 dark:hover:border-green-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
+              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">10+</div>
               <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Projects Completed</div>
             </motion.div>
 

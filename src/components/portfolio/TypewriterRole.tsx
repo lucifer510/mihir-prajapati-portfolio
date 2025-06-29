@@ -9,10 +9,12 @@ export default function TypewriterRole() {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const roles = [
-    "Full Stack Developer",
+    "Java Developer",
     "Software Engineer",
-    "Systems Designer",
-    "AI Enthusiast"
+    "UI/UX Designer",
+    "AI Enthusiast",
+    "PowerBI Developer",
+    "Quality Assurance Engineer",
   ];
 
   // Typewriter effect
