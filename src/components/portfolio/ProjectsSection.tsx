@@ -7,74 +7,158 @@ import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
-    title: "Checkersvip.com",
-    subtitle: "Professional Online Checkers Platform",
-    description: "A comprehensive multiplayer American checkers platform designed for competitive play with real-time communication capabilities. Currently undergoing official recognition process with the American Checkers Federation (ACF).",
+    title: "Weather Forecast Dashboard",
+    subtitle: "Real-Time Weather Insights with Power BI + API Integration",
+    description:
+      "An interactive dashboard built using Power BI and integrated with a real-time public Weather API to visualize and analyze key weather metrics. Designed to simplify fragmented weather data and support informed, data-driven decisions.",
     features: [
-      "Real-time multiplayer gameplay with WebSocket technology",
-      "Advanced drag-and-drop game mechanics using DnDKit",
-      "Live chat system with emoji support and moderation",
-      "Player ranking and tournament management system",
-      "Spectator mode with real-time game observation",
-      "Mobile-responsive design for cross-platform play",
-      "Game replay and analysis tools",
-      "Social features including friend lists and challenges"
+      "Real-time weather data visualization including temperature, humidity, wind speed, and pressure",
+      "Multi-city comparison with dynamic filters for location and time",
+      "Interactive charts, slicers, and KPIs for intuitive forecasting insights",
+      "Responsive and clean UI design optimized for usability",
+      "Live API integration for up-to-date environmental conditions",
+      "Custom visuals for enhanced weather data representation"
     ],
     deliverables: [
-      "Fully functional web application deployed on production",
-      "Real-time multiplayer game engine",
-      "User authentication and profile management",
-      "Admin dashboard for game moderation",
-      "Tournament management system",
-      "Mobile-optimized responsive interface",
-      "Integration with payment systems for premium features"
+      "Power BI Dashboard with real-time API connectivity",
+      "Data model optimized for fast query performance",
+      "Dynamic report pages for multi-location analysis",
+      "Integrated slicers and filters for user interactivity",
+      "Forecast summary cards and KPI indicators",
+      "Documentation for dashboard usage and API structure"
     ],
-    tech: ["Next.js", "NextUI", "Tailwind CSS", "DnDKit", "Fastify", "Redis", "Socket.io", "PostgreSQL", "Prisma", "JWT Authentication", "Stripe API"],
-    github: "https://github.com",
-    live: "https://checkersvip.com",
-    gradient: "from-blue-500 to-cyan-500",
-    status: "Live",
-    category: "Web Application",
+    tech: [
+      "Power BI",
+      "REST API",
+      "Microsoft Power Query",
+      "DAX",
+      "Custom Visuals",
+      "Data Modeling"
+    ],
+    // github: "", // Add if available
+    live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-weatherdashboard-dataanalytics-activity-7344980899001741312-PEze?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM",   // Add if hosted/published
+    gradient: "from-blue-400 to-indigo-500",
+    status: "Completed",
+    category: "Data Analytics",
     highlight: "Featured",
-    timeline: "6 months",
-    clientType: "Gaming Industry"
+    timeline: "Recently",
+    clientType: "Weather Forecast Dashboard"
   },
   {
-    title: "AskRudy.ai",
-    subtitle: "AI-Powered Document Intelligence Platform",
-    description: "An advanced RAG-based AI chatbot that revolutionizes document interaction through multilingual translation and intelligent conversation capabilities. Features cutting-edge OpenAI multimodal technology for screenshot analysis and real-time text translation.",
+    title: "HR Analytics Dashboard",
+    subtitle: "Comprehensive Workforce Analysis in Power BI",
+    description:
+      "A fully interactive HR Analytics Dashboard built in Power BI to help HR departments extract actionable insights from employee data. The dashboard centralizes demographic, attrition, and hiring trends to support strategic workforce planning.",
     features: [
-      "RAG (Retrieval-Augmented Generation) architecture for accurate responses",
-      "Multi-format document support (PDF, DOCX, TXT, images)",
-      "OpenAI GPT-4 Vision integration for screenshot analysis",
-      "Real-time multilingual translation (50+ languages)",
-      "Intelligent document chunking and vector embeddings",
-      "Conversational AI with context-aware responses",
-      "Document highlighting and annotation tools",
-      "Export capabilities for translations and summaries",
-      "Collaborative workspace for team document analysis"
+      "Employee demographic breakdown (gender, age group, marital status)",
+      "Department-wise employee count and attrition visualization",
+      "Geographical map showing distribution of employees across locations",
+      "Attrition trend analysis with multi-level filters (role, gender, department)",
+      "Hiring trend insights including monthly/quarterly joins and tenure distribution",
+      "Interactive slicers for dynamic filtering across all dimensions",
+      "User-friendly and intuitive layout for rapid data interpretation"
     ],
     deliverables: [
-      "Production-ready AI chatbot platform",
-      "Document processing pipeline with OCR capabilities",
-      "Multi-language translation engine",
-      "User dashboard with document management",
-      "Subscription management with Stripe integration",
-      "API documentation and integration guides",
-      "Mobile-responsive Progressive Web App",
-      "Analytics dashboard for usage tracking"
+      "Power BI dashboard with HR metrics visualization",
+      "DAX-powered KPIs like attrition rate, average tenure, and total headcount",
+      "Interactive filtering for role, department, education, and gender",
+      "Geographical map visuals with drill-down capabilities",
+      "Documentation and usage guide for HR stakeholders"
     ],
-    tech: ["Next.js", "NextUI", "Vercel AI SDK", "React-PDF", "Firebase", "LangChain", "OpenAI GPT-4", "Pinecone", "Stripe", "Tesseract.js", "PDF.js", "Zustand"],
-    github: "https://github.com",
-    live: "https://askrudy.ai",
-    gradient: "from-purple-500 to-pink-500",
-    status: "Live",
-    category: "AI Platform",
+    tech: [
+      "Power BI",
+      "Microsoft Power Query",
+      "DAX",
+      "Microsoft Fabric",
+      "Data Modeling",
+      "Data Visualization"
+    ],
+    // github: "", // Add GitHub link if available
+    live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-hranalytics-datavisualization-activity-7334919165692002305-qago?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM",   // Add live link or Power BI publish link if available
+    gradient: "from-green-400 to-emerald-500",
+    status: "Completed",
+    category: "Data Analytics",
     highlight: "Featured",
-    timeline: "8 months",
-    clientType: "EdTech & Enterprise"
+    timeline: "2 months",
+    clientType: "HR & Workforce Analytics"
+  },
+  {
+    title: "Patient Case Type Analysis Dashboard",
+    subtitle: "Healthcare Analytics with Power BI",
+    description:
+      "An advanced Power BI dashboard designed to analyze patient case types and monitor waitlist trends across medical specialties. Built to assist healthcare administrators in making data-informed decisions for operational efficiency and better patient outcomes.",
+    features: [
+      "Time-series trend analysis of Day Case, Inpatient, and Outpatient volumes (2018–2021)",
+      "Top 5 specialty identification by patient volume (e.g., Anaesthetics, Cardiology)",
+      "Demographic segmentation by age bands and time durations (0–3 months to 18+ months)",
+      "Median waitlist duration tracker with dynamic, interactive visuals",
+      "Multi-level filters for case type, specialty, and time range",
+      "Bookmarks and tooltips for improved dashboard navigation and usability"
+    ],
+    deliverables: [
+      "Interactive Power BI dashboard with multi-specialty case analysis",
+      "Data model optimized for healthcare metrics and segmentation",
+      "DAX-based dynamic KPIs for rolling trend and demographic stats",
+      "Power Query-based ETL pipeline for raw data transformation",
+      "Waitlist analytics module with median duration and filters",
+      "Comprehensive usage documentation for hospital stakeholders"
+    ],
+    tech: [
+      "Power BI",
+      "Microsoft Power Query",
+      "DAX",
+      "Microsoft Fabric",
+      "Data Modeling",
+      "Statistical Data Analysis"
+    ],
+    // github: "", // Add GitHub link if applicable
+    live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-dataanalytics-healthcareanalytics-activity-7337359629909118976-m-Np?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM",   // Add live/report link if available
+    gradient: "from-red-500 to-rose-500",
+    status: "Completed",
+    category: "Healthcare Analytics",
+    highlight: "Featured",
+    timeline: "1 month",
+    clientType: "Healthcare & Hospitals"
+  },
+  {
+    title: "Mahadev Sales Dashboard",
+    subtitle: "Interactive Sales Performance Analytics with Power BI",
+    description:
+      "A Power BI-driven interactive dashboard built to analyze and monitor sales performance across products, regions, and time periods. The project helps stakeholders gain a clear understanding of KPIs, spot trends, and drive informed decisions with data storytelling.",
+    features: [
+      "Region-wise and product-wise sales segmentation",
+      "Monthly time-series analysis to detect trends and seasonality",
+      "Dynamic filters and slicers for real-time data interaction",
+      "KPI cards showing total sales, top-performing products, and growth rates",
+      "Clean visual layout for quick decision-making insights",
+      "Scalable design allowing easy updates with new data"
+    ],
+    deliverables: [
+      "Interactive Power BI dashboard with sales insights",
+      "Custom DAX measures for accurate KPI calculations",
+      "ETL pipeline using Power Query for data cleaning and shaping",
+      "Time-series analysis module with trend visualizations",
+      "Documentation for dashboard usage and KPI definitions"
+    ],
+    tech: [
+      "Power BI",
+      "DAX",
+      "Microsoft Power Query",
+      "Data Modeling",
+      "Microsoft Fabric",
+      "Time Series Analysis"
+    ],
+    // github: "", // Add if available
+    live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-dataanalytics-dashboarddesign-activity-7332265191264387073-OZid?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM",   // Add if published or embedded
+    gradient: "from-yellow-500 to-orange-500",
+    status: "Completed",
+    category: "Business Intelligence",
+    highlight: "Featured",
+    timeline: "1 month",
+    clientType: "Retail & FMCG"
   }
 ];
+
 
 export default function ProjectsSection() {
   const containerVariants = {
@@ -269,13 +353,13 @@ export default function ProjectsSection() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                      <Link
+                      {/* <Link
                         href={project.github}
                         className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
                       >
                         <Icon icon="solar:code-bold" width={18} height={18} className="md:w-5 md:h-5" />
                         <span>View Repository</span>
-                      </Link>
+                      </Link> */}
 
                       <Link
                         href={project.live}
@@ -353,7 +437,7 @@ export default function ProjectsSection() {
                       <div className="p-1.5 md:p-2 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg md:rounded-xl">
                         <Icon icon="solar:code-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
                       </div>
-                      <span>Technology Stack</span>
+                      <span>Technical Skills</span>
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {project.tech.map((tech, techIndex) => (
