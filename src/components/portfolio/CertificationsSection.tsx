@@ -3,211 +3,138 @@
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 
 type Certificate = {
   title: string;
-  provider: string;
   platform: string;
   issued: string;
   credentialId: string;
   skills: string[];
-  providerIcon: string;
   platformIcon: string;
   color: string;
   certificatePreview: string;
-  providerIconSize: number;
   platformIconSize: number;
 };
 
 const certifications: Certificate[] = [
   {
-    title: "DevOps Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "November 2023",
-    credentialId: "P67DLWJP2GL7",
-    skills: ["Continuous Integration", "DevOps", "Product Development", "IaaC"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
+    title: "Power BI Essential Training (2022)",
+    platform: "Linkedin Learning",
+    issued: "June, 2025",
+    credentialId: "b54b5a3d6aa94b5ba3ccf84b3d8e777869cc231922ba072b6be01c651ebfc5dc",
+    skills: [
+      "microsoft power bi",
+      "microsoft fabric",
+      "data modeling",
+      "data science",
+      "data analysis",
+      "data cleaning",
+      "data visualization"
+    ],
+    platformIcon: "logos:linkedin",
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/P67DLWJP2GL7_DEVOPS.png",
-    providerIconSize: 64,
+    certificatePreview: "/certificates/powerbi_training_linkedin.jpg",
     platformIconSize: 88
   },
   {
-    title: "Git and GitHub Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "YYQL3U4QAZJF",
-    skills: ["Version Control", "Git", "GitHub", "GitLab", "Open Source"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
+    title: "CSS, Bootstrap, and Javascript Web Development Course ",
+    platform: "Udemy",
+    issued: "February, 2023",
+    credentialId: "UC-3b45969c-a9a1-4eec-a5c4-a17ee2594b04",
+    skills: [
+      "CSS",
+      "Bootstrap",
+      "Javascript",
+      "Styling",
+    ],
+    platformIcon: "logos:udemy",
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/ YYQL3U4QAZJF_GIT_GITHUB.png",
-    providerIconSize: 64,
+    certificatePreview: "/certificates/CSS_Javascript_Boostrap_udemy_certificate.jpg",
     platformIconSize: 88
   },
   {
-    title: "Web Development with HTML, CSS, JavaScript Essentials",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "3UPD6SABRD3B",
-    skills: ["IBM Cloud", "HTML", "CSS", "Full-Stack Development"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
+    title: "Complete Web Development",
+    platform: "Udemy",
+    issued: "August, 2023",
+    credentialId: "UC-04bbec20-ea1a-4b04-bd7f-b5ad6b6f0ef5/",
+    skills: [
+      "HTML/HTML5",
+      "CSS/CSS3",
+      "Bootstrap 5",
+      "Javascript (ES6/ES7/ES8/ES9/ES10/ES2020)",
+      "React",
+      "Git + Github",
+      "Command Line",
+      "Node.js",
+      "Express.js",
+      "NPM",
+      "RESTful API Design",
+      "PostgresSQL",
+      "SQL",
+      "Authentication",
+      "Authorization",
+      "Scalable Infrastructure",
+      "Security",
+      "Production and Deployment"
+    ],
+    platformIcon: "logos:udemy",
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/3UPD6SABRD3B_INTRO_WEB.png",
-    providerIconSize: 64,
+    certificatePreview: "/certificates/web_developer_udemy_certificate.jpg",
     platformIconSize: 88
   },
   {
-    title: "Introduction to Cloud Computing",
-    provider: "IBM",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "verified-credly",
-    skills: ["Container", "IaaS", "IBM Cloud", "Architecture", "Cloud Computing", "PaaS", "DevOps"],
-    providerIcon: "lineicons:ibm",
-    platformIcon: "logos:coursera",
+    title: "HTML5 - From Basics to Advanced level",
+    platform: "Udemy",
+    issued: "February, 2023",
+    credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
+    skills: [
+      "HTML/HTML5",
+      "Semantic UI"
+    ],
+    platformIcon: "logos:udemy",
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/EXFQ7QMJYUQQ_AWS.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-
-  {
-    title: "Introduction to Databases for Back-End Development",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "5FNQEGLH78UD",
-    skills: ["Database Design", "SQL", "Backend Development", "Data Management"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/5FNQEGLH78UD_DATABASES_FOR_BACKEND.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-
-  {
-    title: "Introduction to Back-End Development",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "2Y8NRQC5MP96",
-    skills: ["Backend Development", "APIs", "Server-Side Programming", "Web Development"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/2Y8NRQC5MP96_INTRO_BE.png",
-    providerIconSize: 64,
+    certificatePreview: "/certificates/html_udemy.jpg",
     platformIconSize: 88
   },
   {
-    title: "Django Web Framework",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "3YRA842UKERB",
-    skills: ["Django", "Python", "Web Framework", "MVC Architecture"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/3YRA842UKERB_DJANGO.png",
-    providerIconSize: 64,
+    title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+    platform: "Udemy",
+    issued: "September, 2023",
+    credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
+    skills: [
+      "UI/UX Design",
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+      "Responsive Web Design",
+      "HTML5",
+      "CSS3",
+      "Accessibility",
+      "Typography"
+    ],
+    platformIcon: "logos:udemy",
+    color: "from-blue-500 to-blue-600",
+    certificatePreview: "/certificates/uiux_udemy.jpg",
     platformIconSize: 88
   },
   {
-    title: "Programming in Python",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "2AUUVS958L5Y",
-    skills: ["Python", "Programming", "Data Structures", "Algorithms"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/2AUUVS958L5Y_PYTHON.png",
-    providerIconSize: 64,
+    title: "Prompt Engineering: How to Talk to the AIs",
+    platform: "Linkedin Learning",
+    issued: "May, 2025",
+    credentialId: "0481b0547e8ff89b9897b47d6f1a63fbc6b8b5ab83125c265879e7b8e315b73c",
+    skills: [
+      "Large Language Models(LLM)",
+      "Generative AI",
+      "Prompt Engineering",
+    ],
+    platformIcon: "logos:linkedin",
+    color: "from-blue-500 to-blue-600",
+    certificatePreview: "/certificates/prompt_engineering_linkedin.jpg",
     platformIconSize: 88
-  },
-
-  {
-    title: "Version Control",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "January 2023",
-    credentialId: "BLGJKHN6UTSF",
-    skills: ["Git", "Version Control", "Collaboration", "Software Development"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/BLGJKHN6UTSF_version_control.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-  {
-    title: "Introduction to Databases",
-    provider: "Meta",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "N9LJFAWZXTMA",
-    skills: ["Database Fundamentals", "SQL", "Data Management", "Database Design"],
-    providerIcon: "logos:meta-icon",
-    platformIcon: "logos:coursera",
-    color: "from-blue-500 to-purple-600",
-    certificatePreview: "/certificates/N9LJFAWZXTMA_DATABASES.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-  {
-    title: "AWS Cloud Technical Essentials",
-    provider: "Amazon Web Services",
-    platform: "Coursera",
-    issued: "February 2023",
-    credentialId: "EXFQ7QMJYUQQ",
-    skills: ["AWS", "Cloud Computing", "EC2", "S3", "IAM", "VPC"],
-    // providerIcon: "logos:aws",
-    providerIcon: "skill-icons:aws-dark",
-    platformIcon: "logos:coursera",
-    color: "from-orange-500 to-red-600 text-black dark:text",
-    certificatePreview: "/certificates/EXFQ7QMJYUQQ_AWS.png",
-    providerIconSize: 44,
-    platformIconSize: 88
-  },
-  {
-    title: "Foundations: Data, Data, Everywhere",
-    provider: "Google",
-    platform: "Coursera",
-    issued: "November 2022",
-    credentialId: "6RUAYHXFV5XZ",
-    skills: ["Data Analysis", "Data Management", "Statistical Analysis"],
-    providerIcon: "logos:google",
-    platformIcon: "logos:coursera",
-    color: "from-indigo-500 to-purple-600",
-    certificatePreview: "/certificates/6RUAYHXFV5XZ_Foundations_data.png",
-    providerIconSize: 64,
-    platformIconSize: 88
-  },
-  {
-    title: "Databases with SQL",
-    provider: "CS50",
-    platform: "HarvardX",
-    issued: "May 2025",
-    credentialId: "d7be6646-4c57-431e-88a9-ad7b882864e3",
-    skills: ["SQL", "Database", "Data Management", "Data Analysis"],
-    providerIcon: "fa-solid:university",
-    platformIcon: "simple-icons:edx",
-    color: "from-indigo-500 to-purple-600",
-    certificatePreview: "/certificates/CS50_SQL.png",
-    providerIconSize: 44,
-    platformIconSize: 44
   }
 ];
 
@@ -315,8 +242,8 @@ export default function CertificationsSection() {
                   {/* Header with gradient - keeping this as requested */}
                   <div className={`h-20 flex items-center justify-between bg-slate-100 dark:bg-slate-900 px-4 ${cert.color} relative overflow-hidden`}>
                     <div className="flex items-center justify-end mr-4 gap-1">
-                      <Icon icon={cert.providerIcon} className="" width={cert.providerIconSize} height={cert.providerIconSize} />
-                      <span className="text-black dark:text-white text-sm font-bold">×</span>
+                      {/* <Icon icon={cert.providerIcon} className="" width={cert.providerIconSize} height={cert.providerIconSize} />
+                      <span className="text-black dark:text-white text-sm font-bold">×</span> */}
                       <Icon icon={cert.platformIcon} className="" width={cert.platformIconSize} height={cert.platformIconSize} />
                     </div>
                     <div className="flex items-center justify-start gap-0">
@@ -340,13 +267,13 @@ export default function CertificationsSection() {
 
                     {/* Provider Info */}
                     <div className="space-y-3 mb-6 bg-gray-50/50 dark:bg-gray-800/30 rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/30">
-                      <div className="flex items-center gap-3 text-sm">
+                      {/* <div className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-md flex items-center justify-center">
                           <Icon icon="solar:buildings-2-bold" className="text-white" width={12} height={12} />
                         </div>
                         <span className="text-gray-600 dark:text-gray-400 font-medium">Provider:</span>
                         <span className="font-semibold text-gray-900 dark:text-white">{cert.provider}</span>
-                      </div>
+                      </div> */}
                       <div className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-md flex items-center justify-center">
                           <Icon icon="solar:monitor-smartphone-bold" className="text-white" width={12} height={12} />
@@ -387,7 +314,7 @@ export default function CertificationsSection() {
 
                     {/* Credential ID */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-200/60 dark:border-gray-700/50">
-                      <Link
+                      {/* <Link
                         href={`https://www.coursera.org/verify/${cert.credentialId}`}
                         target="_blank"
                       // rel="noopener noreferrer"
@@ -399,7 +326,7 @@ export default function CertificationsSection() {
                           </span>
                           <Icon icon="solar:link-bold" className="text-gray-500" width={14} height={14} />
                         </div>
-                      </Link>
+                      </Link> */}
                       <button
                         className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 rounded-lg border border-blue-200/60 dark:border-blue-700/50 hover:border-blue-300/80 dark:hover:border-blue-600/70 hover:from-blue-100 hover:to-blue-200 dark:hover:from-blue-800/30 dark:hover:to-blue-700/30 transition-all duration-300 text-xs font-medium shadow-sm hover:shadow-md"
                         onClick={() => setSelectedCertificate(cert)}
@@ -431,7 +358,7 @@ export default function CertificationsSection() {
                   <Icon icon="solar:star-outline" className="text-white" width={18} height={18} />
                 </div>
                 <span className="text-blue-700 dark:text-blue-300 text-sm md:text-base font-semibold">
-                  13 Professional Certifications
+                  6 Professional Certifications
                 </span>
               </div>
               <div className="w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
@@ -471,7 +398,7 @@ export default function CertificationsSection() {
                     {selectedCertificate.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                    {selectedCertificate.provider} • {selectedCertificate.issued}
+                    {selectedCertificate.platform} • {selectedCertificate.issued}
                   </p>
                 </div>
                 <motion.button
