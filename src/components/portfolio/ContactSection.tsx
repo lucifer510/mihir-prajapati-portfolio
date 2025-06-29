@@ -43,7 +43,7 @@ export default function ContactSection() {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'lightify6@gmail.com', // Your email
+          to_email: 'workwithmihirprajapati@gmail.com', // Your email
         },
         publicKey
       );
