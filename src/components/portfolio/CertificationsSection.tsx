@@ -40,19 +40,40 @@ const certifications: Certificate[] = [
     platformIconSize: 88
   },
   {
-    title: "CSS, Bootstrap, and Javascript Web Development Course ",
-    platform: "Udemy",
-    issued: "February, 2023",
-    credentialId: "UC-3b45969c-a9a1-4eec-a5c4-a17ee2594b04",
+    title: "Prompt Engineering: How to Talk to the AIs",
+    platform: "Linkedin Learning",
+    issued: "May, 2025",
+    credentialId: "0481b0547e8ff89b9897b47d6f1a63fbc6b8b5ab83125c265879e7b8e315b73c",
     skills: [
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "Styling",
+      "Large Language Models(LLM)",
+      "Generative AI",
+      "Prompt Engineering",
+    ],
+    platformIcon: "logos:linkedin",
+    color: "from-blue-500 to-blue-600",
+    certificatePreview: "/certificates/prompt_engineering_linkedin.jpg",
+    platformIconSize: 88
+  },
+  {
+    title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+    platform: "Udemy",
+    issued: "September, 2023",
+    credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
+    skills: [
+      "UI/UX Design",
+      "Figma",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+      "Responsive Web Design",
+      "HTML5",
+      "CSS3",
+      "Accessibility",
+      "Typography"
     ],
     platformIcon: "logos:udemy",
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/CSS_Javascript_Boostrap_udemy_certificate.jpg",
+    certificatePreview: "/certificates/uiux_udemy.jpg",
     platformIconSize: 88
   },
   {
@@ -86,6 +107,22 @@ const certifications: Certificate[] = [
     platformIconSize: 88
   },
   {
+    title: "CSS, Bootstrap, and Javascript Web Development Course ",
+    platform: "Udemy",
+    issued: "February, 2023",
+    credentialId: "UC-3b45969c-a9a1-4eec-a5c4-a17ee2594b04",
+    skills: [
+      "CSS",
+      "Bootstrap",
+      "Javascript",
+      "Styling",
+    ],
+    platformIcon: "logos:udemy",
+    color: "from-blue-500 to-blue-600",
+    certificatePreview: "/certificates/CSS_Javascript_Boostrap_udemy_certificate.jpg",
+    platformIconSize: 88
+  },
+  {
     title: "HTML5 - From Basics to Advanced level",
     platform: "Udemy",
     issued: "February, 2023",
@@ -98,45 +135,9 @@ const certifications: Certificate[] = [
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/html_udemy.jpg",
     platformIconSize: 88
-  },
-  {
-    title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
-    platform: "Udemy",
-    issued: "September, 2023",
-    credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
-    skills: [
-      "UI/UX Design",
-      "Figma",
-      "Wireframing",
-      "Prototyping",
-      "Design Systems",
-      "Responsive Web Design",
-      "HTML5",
-      "CSS3",
-      "Accessibility",
-      "Typography"
-    ],
-    platformIcon: "logos:udemy",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/uiux_udemy.jpg",
-    platformIconSize: 88
-  },
-  {
-    title: "Prompt Engineering: How to Talk to the AIs",
-    platform: "Linkedin Learning",
-    issued: "May, 2025",
-    credentialId: "0481b0547e8ff89b9897b47d6f1a63fbc6b8b5ab83125c265879e7b8e315b73c",
-    skills: [
-      "Large Language Models(LLM)",
-      "Generative AI",
-      "Prompt Engineering",
-    ],
-    platformIcon: "logos:linkedin",
-    color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/prompt_engineering_linkedin.jpg",
-    platformIconSize: 88
   }
 ];
+
 
 export default function CertificationsSection() {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
