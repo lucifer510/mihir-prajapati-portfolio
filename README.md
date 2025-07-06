@@ -1,4 +1,4 @@
-# 🚀 Muhammad Ramazan - Portfolio
+# 🚀 Mihir Prajapati - Portfolio
 
 A stunning, modern portfolio website built with cutting-edge technologies and beautiful animations inspired by Aceternity UI design principles.
 
@@ -80,8 +80,8 @@ A stunning, modern portfolio website built with cutting-edge technologies and be
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/lightify97/portfolio.git
-   cd portfolio
+   git clone https://github.com/lucifer510/mihir-prajapati-portfolio.git
+   cd mihir-prajapati-portfolio
    ```
 
 2. **Install dependencies**
@@ -127,13 +127,38 @@ Modify the `projects` array in `src/components/portfolio/ProjectsSection.tsx`:
 
 ```typescript
 {
-  title: "Your Project Title",
-  description: "Project description...",
-  image: "🎯", // Emoji or image URL
-  tech: ["React", "Node.js", "MongoDB"],
-  github: "https://github.com/username/repo",
-  live: "https://yourproject.com",
-  color: "from-blue-500 to-purple-500"
+   title: "Project title",
+   subtitle: "your project's subtitle",
+   description:"your project's description",
+   features: [],
+   deliverables: [],
+   tech: [],
+   github: "", // Add if available
+   live: "https://your-project-url.com/",   // Add if hosted/published
+   gradient: "from-blue-400 to-indigo-500",
+   status: "project status",
+   category: "Project category",
+   highlight: "Featured",
+   timeline: "Time took to build the project",
+   clientType: "Project Client Type"
+}
+```
+
+### **Certificates**
+
+Update certificates in the certificates section of `src/components/portfolio/CertificationsSection.tsx`:
+
+```typescript
+{
+  title: string;
+  platform: string;
+  issued: string;
+  credentialId: string;
+  skills: string[];
+  platformIcon: string;
+  color: string;
+  certificatePreview: string;
+  platformIconSize: number;
 }
 ```
 
@@ -143,8 +168,14 @@ Update skills in the skills section of `src/components/portfolio/TechStackSectio
 
 ```typescript
 {
-  category: "Frontend",
-  skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+  "Skill category":[{
+      name: string;
+      icon: string;
+      level: "Beginner" | "Intermediate" | "Expert";
+      category: string;
+      description: string;
+      yearsUsed?: number;
+  }]
 }
 ```
 
@@ -154,12 +185,16 @@ Modify the experience array in `src/components/portfolio/ExperienceSection.tsx`:
 
 ```typescript
 {
-  role: "Your Role",
-  company: "Company Name",
-  period: "2023 - Present",
-  description: "Role description...",
-  achievements: ["Achievement 1", "Achievement 2"]
-}
+    role: string,
+    company: string,
+    period: string,
+    type: string,
+    companyIcon: string,
+    companyColor: "from-green-500 to-green-600",
+    description: string,
+    achievements: [],
+    technologies: []
+  }
 ```
 
 ### **Styling**
@@ -170,7 +205,7 @@ Modify the experience array in `src/components/portfolio/ExperienceSection.tsx`:
 
 ## 📂 Project Structure
 
-```
+```md
 portfolio/
 ├── src/
 │   ├── app/
@@ -225,8 +260,6 @@ portfolio/
 └── README.md              # This file
 ```
 
-=
-
 ## 📱 Browser Support
 
 - ✅ Chrome (Latest)
@@ -246,18 +279,14 @@ portfolio/
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/lightify97/portfolio/issues).
-
 ## 👨‍💻 Author
 
-**Muhammad Ramazan**
+**Mihir Prajapati**
 
-- Portfolio: [https://mramazan.dev](https://mramazan.dev)
-- GitHub: [@lightify97](https://github.com/lightify97)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/m-ramazan)
-- Email: mramazan1@yahoo.com
+- Portfolio: [https://mihirprajapati.vercel.app](https://mihirprajapati.vercel.app)
+- GitHub: [@lucifer510](https://github.com/lucifer510)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/mihir-prajapati-fs)
+- Email: workwithmihirprajapati@gmail.com
 
 ## 🙏 Acknowledgments
 
