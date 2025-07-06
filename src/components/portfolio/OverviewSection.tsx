@@ -328,7 +328,7 @@ export default function OverviewSection() {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-gray-900 dark:text-white">
-                      mihirprajapati.dev
+                      mihirprajapati.vercel.app
                     </div>
                   </div>
                 </motion.div>
