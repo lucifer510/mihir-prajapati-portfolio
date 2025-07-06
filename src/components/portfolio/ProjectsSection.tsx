@@ -41,7 +41,7 @@ const projects = [
     status: "Completed",
     category: "Data Analytics",
     highlight: "Featured",
-    timeline: "Recently",
+    timeline: "2 weeks",
     clientType: "Weather Forecast Dashboard"
   },
   {
@@ -79,7 +79,7 @@ const projects = [
     status: "Completed",
     category: "Data Analytics",
     highlight: "Featured",
-    timeline: "2 months",
+    timeline: "1 week",
     clientType: "HR & Workforce Analytics"
   },
   {
@@ -154,9 +154,47 @@ const projects = [
     status: "Completed",
     category: "Business Intelligence",
     highlight: "Featured",
-    timeline: "1 month",
+    timeline: "1 week",
     clientType: "Retail & FMCG"
-  }
+  },
+  {
+  title: "Amazon Sales Dashboard",
+  subtitle: "E-commerce Performance Insights in Power BI",
+  description:
+    "An interactive sales analytics dashboard built in Power BI to provide a detailed overview of Amazon's sales performance. The dashboard transforms raw transactional data into actionable insights across product categories, regions, and time periods to support e-commerce strategy.",
+  features: [
+    "Sales and revenue trend analysis with dynamic date filters",
+    "Top-performing product and category visualizations",
+    "Geographical breakdown of regional sales performance",
+    "Profit margin tracking across SKUs and categories",
+    "Return rate insights to identify operational inefficiencies",
+    "Interactive slicers for product, region, time, and status",
+    "Custom KPIs for orders, profit, returns, and growth rate"
+  ],
+  deliverables: [
+    "Power BI dashboard for Amazon sales metrics and trends",
+    "DAX-powered measures including total sales, profit margin, return rate",
+    "Data model with relationships between orders, products, and geography",
+    "User-centric dashboard layout with tooltips and filters",
+    "End-to-end documentation and walkthrough video for demo"
+  ],
+  tech: [
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Data Modeling",
+    "Data Visualization",
+    "E-commerce Analytics"
+  ],
+  // github: "", // Add GitHub link if available
+  live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-dataanalytics-dashboarddesign-activity-7347534812959682561-CfJW?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM", // Replace with actual LinkedIn or Power BI link
+  gradient: "from-violet-500 to-purple-800",
+  status: "Completed",
+  category: "Data Analytics",
+  highlight: "Featured",
+  timeline: "1 month",
+  clientType: "E-commerce Analytics"
+}
 ];
 
 
