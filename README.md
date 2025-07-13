@@ -281,12 +281,12 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Mihir Prajapati**
+### Mihir Prajapati
 
 - Portfolio: [https://mihirprajapati.vercel.app](https://mihirprajapati.vercel.app)
 - GitHub: [@lucifer510](https://github.com/lucifer510)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/mihir-prajapati-fs)
-- Email: workwithmihirprajapati@gmail.com
+- Email: [workwithmihirprajapati@gmail.com](workwithmihirprajapati@gmail.com)
 
 ## 🙏 Acknowledgments
 
@@ -297,6 +297,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Made with ❤️ and cutting-edge web technologies**
+### Made with ❤️ and cutting-edge web technologies
 
 _This portfolio demonstrates modern web development practices and showcases the beauty of well-crafted user interfaces._
