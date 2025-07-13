@@ -113,7 +113,7 @@ const projects = [
     ],
     // github: "", // Add GitHub link if applicable
     live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-dataanalytics-healthcareanalytics-activity-7337359629909118976-m-Np?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM",   // Add live/report link if available
-    gradient: "from-red-500 to-rose-500",
+    gradient: "from-emerald-400 to-cyan-400",
     status: "Completed",
     category: "Healthcare Analytics",
     highlight: "Featured",
@@ -194,6 +194,43 @@ const projects = [
   highlight: "Featured",
   timeline: "1 month",
   clientType: "E-commerce Analytics"
+},
+{
+  title: "Zomato Analytics Dashboard",
+  subtitle: "Food Delivery Insights Visualized with Power BI",
+  description:
+    "An end-to-end Power BI dashboard designed to simulate and analyze key operational metrics of a food delivery platform like Zomato. The dashboard offers strategic insights into restaurant performance, order behavior, and sales trends to support data-driven decisions in the food tech industry.",
+  features: [
+    "Top-performing restaurants by rating, revenue, and number of orders",
+    "Time-based trends showing peak order hours and daily patterns",
+    "City and cuisine-wise sales distribution using visual maps",
+    "Interactive slicers for filtering data by city, cuisine, restaurant, and more",
+    "Sales vs. order volume analysis with dynamic visuals",
+    "Geo-analysis of customer demand and restaurant locations",
+    "Clean and intuitive layout with drill-through for deeper exploration"
+  ],
+  deliverables: [
+    "Power BI dashboard with complete restaurant and customer analytics",
+    "DAX-powered KPIs such as total orders, average revenue, and customer count",
+    "Visuals for time trends, category segmentation, and top contributors",
+    "Interactive filters and drill-down functionality across all views",
+    "Documentation and navigation guide for stakeholders or decision-makers"
+  ],
+  tech: [
+    "Power BI",
+    "Microsoft Power Query",
+    "DAX",
+    "Data Modeling",
+    "Data Visualization"
+  ],
+  // github: "", // Add GitHub link if available
+  live: "https://www.linkedin.com/posts/mihir-prajapati-fs_powerbi-datavisualization-zomato-activity-7350033320409296896-o6em?utm_source=share&utm_medium=member_desktop&rcm=ACoAADzjgU4Bi4-dBjCV6AD6TLjRnM2F2EWNFTM", // Replace with dashboard link if separate
+  gradient: "from-red-500 to-rose-700",
+  status: "Completed",
+  category: "Data Analytics",
+  highlight: "Featured",
+  timeline: "3 weeks",
+  clientType: "Food Delivery Analytics"
 }
 ];
 

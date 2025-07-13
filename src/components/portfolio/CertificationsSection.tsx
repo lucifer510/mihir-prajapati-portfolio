@@ -21,6 +21,20 @@ type Certificate = {
 
 const certifications: Certificate[] = [
   {
+    title: "Jira Agile Fundamentals",
+    platform: "Udemy",
+    issued: "July, 2025",
+    credentialId: "UC-7a1249c9-62f8-4525-b5d3-7eb55de4a580",
+    skills: [
+      "jira",
+      "agile project management",
+    ],
+    platformIcon: "logos:udemy",
+    color: "from-blue-500 to-blue-600",
+    certificatePreview: "/certificates/jira_essentials_udemy.jpg",
+    platformIconSize: 88
+  },
+  {
     title: "Power BI Essential Training (2022)",
     platform: "Linkedin Learning",
     issued: "June, 2025",
