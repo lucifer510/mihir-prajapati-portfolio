@@ -41,6 +41,8 @@ export default function OverviewSection() {
     },
   };
 
+
+
   return (
     <motion.section
       id="overview"
@@ -234,12 +236,51 @@ export default function OverviewSection() {
                 <motion.div
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, y: -5 }}
+                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-red-50/80 to-red-100/50 dark:from-red-950/30 dark:to-red-900/20 backdrop-blur-sm border border-red-200/50 dark:border-red-800/30 shadow-xl flex flex-col"
+                >
+                  <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
+                    <div className="p-2 md:p-3 bg-red-500 rounded-lg md:rounded-xl shadow-lg">
+                      <Icon
+                        icon="solar:programming-bold"
+                        className="text-white w-5 md:w-6 h-5 md:h-6"
+                        width={24}
+                        height={24}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">
+                        Backend Developer
+                      </h4>
+                      <p className="text-blue-600 dark:text-red-400 font-medium text-sm md:text-base">
+                        Nextech Infoway Pvt. Ltd.
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
+                     Backend Developer Intern building APIs, contributing to testing and version control using Java, Spring Boot, PostgreSQL, Docker, and Git.
+                  </p>
+                  <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
+                    <Icon
+                      icon="solar:medal-ribbons-star-bold"
+                      className="text-yellow-500 w-3 md:w-4 h-3 md:h-4"
+                      width={16}
+                      height={16}
+                    />
+                    <span className="font-semibold text-green-600 dark:text-green-400">
+                       Sincere • Dedicated • Quick Learner
+                    </span>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02, y: -5 }}
                   className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/80 to-green-100/50 dark:from-green-950/30 dark:to-green-900/20 backdrop-blur-sm border border-green-200/50 dark:border-green-800/30 shadow-xl flex flex-col"
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="p-2 md:p-3 bg-green-500 rounded-lg md:rounded-xl shadow-lg">
                       <Icon
-                        icon="solar:hospital-bold"
+                        icon="solar:bug-bold"
                         className="text-white w-5 md:w-6 h-5 md:h-6"
                         width={24}
                         height={24}
