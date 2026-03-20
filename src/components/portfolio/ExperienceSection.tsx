@@ -8,7 +8,7 @@ const experience = [
   {
     role: "Java Developer",
     company: "Valens Datalabs Pvt. Ltd.",
-    period: "January 2024 — June 2024",
+    period: "January 2024 — April 2024",
     type: "Internship",
     companyIcon: "fa-building",
     companyColor: "from-green-500 to-green-600",
@@ -21,6 +21,21 @@ const experience = [
     ],
     technologies: ["Java", "AWS", "Postgresql", "Elastic Search", "Postman", "Slack", "Spring Boot"]
   },
+  {
+  "role": "Backend Developer Intern",
+  "company": "Nextech Infoway Private Limited",
+  "period": "June 2024 — December 2024",
+  "type": "Internship",
+  "companyIcon": "fa-building",
+  "companyColor": "from-cyan-500 to-cyan-600",
+  "description": "Worked as a Backend Developer Intern, gaining hands-on experience in backend development processes and contributing to application development, testing, and version control.",
+  "achievements": [
+    "Developed and tested backend modules using Java and Spring Boot",
+    "Implemented database schema changes and migrations using Liquibase with PostgreSQL",
+    "Managed containerized development environments using Docker and version control with Git"
+  ],
+  "technologies": ["Java","Spring Boot","Liquibase","PostgreSQL","Postman","Docker","Git"]
+},
   {
   role: "Quality Assurance Engineer",
   company: "FotonVR Pvt. Ltd.",
