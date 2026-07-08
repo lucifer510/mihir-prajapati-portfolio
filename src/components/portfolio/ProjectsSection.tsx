@@ -7,6 +7,44 @@ import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
+  title: "Yash Furniture & Aluminium Section",
+  subtitle: "Modern Furniture & Aluminium Solutions Business Website",
+  description:
+    "Designed and developed a responsive business website for Yash Furniture & Aluminium Section to showcase furniture products, aluminium solutions, and company services while enabling customers to connect through an intuitive and professional online platform.",
+  features: [
+    "Modern and responsive UI for all devices",
+    "Product showcase with categorized furniture and aluminium sections",
+    "Company profile and service information",
+    "Contact form with direct inquiry support",
+    "SEO-friendly architecture for better search visibility",
+    "Fast loading performance with optimized assets"
+  ],
+  deliverables: [
+    "Fully responsive business website",
+    "SEO-optimized pages",
+    "Interactive product and service showcase",
+    "Contact and inquiry functionality",
+    "Performance optimization and deployment",
+    "Production-ready website"
+  ],
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Vercel"
+  ],
+  github: "", // Add if available
+  live: "https://www.yashfurniture.in",
+  gradient: "from-amber-500 to-orange-600",
+  status: "Live",
+  category: "Business Website",
+  highlight: "Featured",
+  timeline: "1 month",
+  clientType: "Furniture & Interior Business"
+},
+  {
     title: "Weather Forecast Dashboard",
     subtitle: "Real-Time Weather Insights with Power BI + API Integration",
     description:

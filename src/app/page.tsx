@@ -23,7 +23,7 @@ export default function Portfolio() {
       {/* Navigation */}
       <Navigation />
 
-      <div className="max-w-6xl mx-auto px-6 pt-24">
+      <div className="max-w-7xl mx-auto px-6 pt-24">
         {/* Hero Section */}
         <HeroSection />
 

@@ -39,7 +39,7 @@ const experience = [
   {
   role: "Quality Assurance Engineer",
   company: "FotonVR Pvt. Ltd.",
-  period: "January 2025 — Present",
+  period: "January 2025 — April 2026",
   type: "Full-time",
   companyColor: "from-blue-500 to-blue-600",
   companyIcon: "mdi:office-building",
@@ -51,6 +51,28 @@ const experience = [
     "Established quality standards and workflows to streamline testing processes"
   ],
   technologies: ["Manual Testing", "Bug Tracking", "Team Management", "Documentation", "Quality Assurance"]
+},
+{
+  role: "Business Development Manager",
+  company: "Yash Furniture & Aluminium Section",
+  period: "May 2026 — July 2026",
+  type: "Full-Time",
+  companyColor: "from-amber-500 to-orange-600",
+  companyIcon: "mdi:sofa",
+  description: "Managed business development activities by acquiring new clients, strengthening customer relationships, and identifying opportunities to drive sales growth.",
+  achievements: [
+    "Generated new business opportunities through client outreach and networking",
+    "Built and maintained strong relationships with customers and partners",
+    "Prepared quotations and negotiated deals to maximize revenue",
+    "Coordinated with internal teams to ensure timely project execution"
+  ],
+  technologies: [
+    "Business Development",
+    "Sales",
+    "Client Relationship Management",
+    "Negotiation",
+    "Lead Generation"
+  ]
 }
 ];
 
