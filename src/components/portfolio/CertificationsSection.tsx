@@ -21,6 +21,101 @@ type Certificate = {
 
 const certifications: Certificate[] = [
   {
+  title: "Assets, Threats, and Vulnerabilities",
+  platform: "Google",
+  issued: "July, 2026",
+  credentialId: "IX41I50Y043H",
+  skills: [
+    "Threat Modeling",
+    "Vulnerability Assessment",
+    "Asset Management",
+    "Security Analysis"
+  ],
+  platformIcon: "logos:google",
+  color: "from-red-500 to-rose-600",
+  certificatePreview: "/certificates/Coursera_IX41I50Y043H_Assets_Threats_and_Vulnerabilities.jpg",
+  platformIconSize: 88
+},
+  {
+  title: "Tools of the Trade: Linux and SQL",
+  platform: "Google",
+  issued: "June, 2026",
+  credentialId: "28RYG0IHWY1R",
+  skills: [
+    "Linux",
+    "SQL",
+    "Command Line",
+    "Database Queries"
+  ],
+  platformIcon: "logos:google",
+  color: "from-orange-500 to-amber-600",
+  certificatePreview: "/certificates/Coursera_28RYG0IHWY1R_Tools_of_the_trade_Linux_and_SQL.jpg",
+  platformIconSize: 88
+},
+  {
+  title: "Connect and Protect: Networks and Network Security",
+  platform: "Google",
+  issued: "June, 2026",
+  credentialId: "BDPC1EZXJDI9",
+  skills: [
+    "Networking",
+    "Network Security",
+    "TCP/IP",
+    "Firewalls"
+  ],
+  platformIcon: "logos:google",
+  color: "from-cyan-500 to-blue-600",
+  certificatePreview: "/certificates/Coursera_BDPC1EZXJDI9_Connect_and_Protect_Networks_and_Network_Security.jpg",
+  platformIconSize: 88
+},
+  {
+  title: "Play It Safe: Manage Security Risks",
+  platform: "Google",
+  issued: "May, 2026",
+  credentialId: "PWBOND4VKRCW",
+  skills: [
+    "Risk Assessment",
+    "Security Controls",
+    "Compliance",
+    "Incident Response"
+  ],
+  platformIcon: "logos:google",
+  color: "from-emerald-500 to-green-600",
+  certificatePreview: "/certificates/Coursera_PWBOND4VKRCW_Play_it_safe_Manage_security_risks.jpg",
+  platformIconSize: 88
+},
+  {
+  title: "Foundations of Cybersecurity",
+  platform: "Google",
+  issued: "April, 2026",
+  credentialId: "297LQGJADXCC",
+  skills: [
+    "Cybersecurity",
+    "Security Principles",
+    "Risk Management",
+    "Threat Analysis"
+  ],
+  platformIcon: "logos:google",
+  color: "from-blue-500 to-indigo-600",
+  certificatePreview: "/certificates/Coursera_297LQGJADXCC_Foundations_of_Cybersecurity.jpg",
+  platformIconSize: 88
+},{
+  title: "Version Control with Git",
+  platform: "Atlassian",
+  issued: "April, 2026",
+  credentialId: "NFQ4KI8N5M59",
+  skills: [
+    "Git",
+    "Version Control",
+    "GitHub",
+    "Collaboration"
+  ],
+  platformIcon: "logos:atlassian",
+  color: "from-slate-500 to-gray-700",
+  certificatePreview: "/certificates/Coursera_NFQ4KI8N5M59_Version_Control_with_Git.jpg",
+  platformIconSize: 56
+},
+  {
     title: "Jira Agile Fundamentals",
     platform: "Udemy",
     issued: "July, 2025",
@@ -96,22 +191,19 @@ const certifications: Certificate[] = [
     issued: "August, 2023",
     credentialId: "UC-04bbec20-ea1a-4b04-bd7f-b5ad6b6f0ef5/",
     skills: [
-      "HTML/HTML5",
-      "CSS/CSS3",
+      "HTML",
+      "CSS",
       "Bootstrap 5",
-      "Javascript (ES6/ES7/ES8/ES9/ES10/ES2020)",
+      "Javascript",
       "React",
       "Git + Github",
-      "Command Line",
+      "CLI",
       "Node.js",
       "Express.js",
       "NPM",
-      "RESTful API Design",
+      "REST API",
       "PostgresSQL",
-      "SQL",
-      "Authentication",
-      "Authorization",
-      "Scalable Infrastructure",
+      "Scalability",
       "Security",
       "Production and Deployment"
     ],
@@ -239,7 +331,7 @@ export default function CertificationsSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4"
+            className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 px-4"
           >
             {certifications.map((cert, index) => (
               <motion.div
@@ -330,7 +422,7 @@ export default function CertificationsSection() {
                     {/* Credential ID */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-200/60 dark:border-gray-700/50">
                       {/* <Link
-                        href={`https://www.coursera.org/verify/${cert.credentialId}`}
+                        href={`https://www.Google.org/verify/${cert.credentialId}`}
                         target="_blank"
                       // rel="noopener noreferrer"
                       >
@@ -373,7 +465,7 @@ export default function CertificationsSection() {
                   <Icon icon="solar:star-outline" className="text-white" width={18} height={18} />
                 </div>
                 <span className="text-blue-700 dark:text-blue-300 text-sm md:text-base font-semibold">
-                  7 Professional Certifications
+                  13 Professional Certifications
                 </span>
               </div>
               <div className="w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
@@ -402,7 +494,7 @@ export default function CertificationsSection() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              // transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="bg-gradient-to-br from-white/95 to-white/90 dark:from-gray-900/95 dark:to-gray-800/90 backdrop-blur-xl rounded-3xl shadow-2xl max-w-4xl max-h-[90vh] overflow-hidden relative border border-white/20 dark:border-gray-700/30"
               onClick={(e) => e.stopPropagation()}
             >

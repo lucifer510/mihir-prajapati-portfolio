@@ -25,7 +25,7 @@ const techStackData: Record<string, TechItem[]> = {
       yearsUsed: 2
     },
     {
-      name: "Springboot",
+      name: "Spring Boot",
       icon: "devicon:spring",
       level: "Expert",
       category: "Backend",
@@ -47,14 +47,6 @@ const techStackData: Record<string, TechItem[]> = {
       category: "Backend",
       description: "JavaScript runtime for building scalable backend services",
       yearsUsed: 1
-    },
-    {
-      name: "Express",
-      icon: "skill-icons:expressjs-dark",
-      level: "Beginner",
-      category: "Backend",
-      description: "Minimalist web framework for Node.js",
-      yearsUsed: 1
     }
   ],
   "Frontend": [
@@ -75,7 +67,7 @@ const techStackData: Record<string, TechItem[]> = {
       yearsUsed: 2
     },
     {
-      name: "Bootstarp",
+      name: "Bootstrap",
       icon: "devicon:bootstrap",
       level: "Expert",
       category: "Frontend",
@@ -89,14 +81,6 @@ const techStackData: Record<string, TechItem[]> = {
       category: "Frontend",
       description: "JavaScript library for building dynamic UIs",
       yearsUsed: 1.5
-    },
-    {
-      name: "Next.js",
-      icon: "devicon:nextjs",
-      level: "Beginner",
-      category: "Frontend",
-      description: "React framework for server-side rendering and routing",
-      yearsUsed: 1
     }
   ],
   "Database": [
@@ -106,14 +90,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "Advanced open-source relational database system",
-      yearsUsed: 3
-    },
-    {
-      name: "MySQL",
-      icon: "logos:mysql",
-      level: "Expert",
-      category: "Database",
-      description: "Widely-used relational database management system",
       yearsUsed: 3
     },
     {
@@ -141,22 +117,6 @@ const techStackData: Record<string, TechItem[]> = {
       category: "Cloud & DevOps",
       description: "Platform for containerizing and deploying applications",
       yearsUsed: 2
-    },
-    {
-      name: "AWS",
-      icon: "skill-icons:aws-light",
-      level: "Beginner",
-      category: "Cloud & DevOps",
-      description: "Cloud platform offering scalable infrastructure and services",
-      yearsUsed: 1
-    },
-    {
-      name: "Jenkins",
-      icon: "devicon:jenkins",
-      level: "Beginner",
-      category: "Cloud & DevOps",
-      description: "Cloud platform offering scalable infrastructure and services",
-      yearsUsed: 1
     }
   ],
   "Developer Tools": [
@@ -169,7 +129,7 @@ const techStackData: Record<string, TechItem[]> = {
       yearsUsed: 4
     },
     {
-      name: "InteliJ Idea",
+      name: "IntelliJ IDEA",
       icon: "devicon:intellij",
       level: "Expert",
       category: "Developer Tools",
@@ -177,7 +137,7 @@ const techStackData: Record<string, TechItem[]> = {
       yearsUsed: 4
     },
     {
-      name: "PyChram",
+      name: "PyCharm",
       icon: "devicon:pycharm",
       level: "Expert",
       category: "Developer Tools",

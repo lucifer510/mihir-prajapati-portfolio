@@ -41,8 +41,6 @@ export default function OverviewSection() {
     },
   };
 
-
-
   return (
     <motion.section
       id="overview"
@@ -132,10 +130,11 @@ export default function OverviewSection() {
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                      I specialize in building scalable, secure, and reliable web and mobile
-                      applications using React, Next.js, Java-Springboot, and modern
-                      development technologies. I thrive on turning complex
-                      problems into elegant solutions that users love.
+                      I specialize in building scalable, secure, and reliable
+                      web and mobile applications using React, Next.js,
+                      Java-Springboot, and modern development technologies. I
+                      thrive on turning complex problems into elegant solutions
+                      that users love.
                     </p>
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                       Beyond work, I love exploring emerging technologies,
@@ -218,16 +217,18 @@ export default function OverviewSection() {
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Contributed as a Java developer by creating RESTful scalable APIs using springboot for ensuring seamless communication between frontend and AI model
+                    Contributed as a Java developer by creating RESTful scalable
+                    APIs using springboot for ensuring seamless communication
+                    between frontend and AI model
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon
                       icon="solar:star-bold"
-                      className="text-yellow-500 w-3 md:w-4 h-3 md:h-4"
+                      className="text-blue-500 w-3 md:w-4 h-3 md:h-4"
                       width={16}
                       height={16}
                     />
-                    <span className="font-semibold text-green-600 dark:text-green-400">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">
                       Top Rated • 91% Success Score
                     </span>
                   </div>
@@ -257,17 +258,19 @@ export default function OverviewSection() {
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                     Backend Developer Intern building APIs, contributing to testing and version control using Java, Spring Boot, PostgreSQL, Docker, and Git.
+                    Backend Developer Intern building APIs, contributing to
+                    testing and version control using Java, Spring Boot,
+                    PostgreSQL, Docker, and Git.
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon
                       icon="solar:medal-ribbons-star-bold"
-                      className="text-yellow-500 w-3 md:w-4 h-3 md:h-4"
+                      className="text-red-400 w-3 md:w-4 h-3 md:h-4"
                       width={16}
                       height={16}
                     />
-                    <span className="font-semibold text-green-600 dark:text-green-400">
-                       Sincere • Dedicated • Quick Learner
+                    <span className="font-semibold text-red-600 dark:text-red-400">
+                      Sincere • Dedicated • Quick Learner
                     </span>
                   </div>
                 </motion.div>
@@ -299,17 +302,61 @@ export default function OverviewSection() {
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Used my analytical skills to identify potentials weaknesses in our application and report them to higher management before it causes any damages.
+                    Used my analytical skills to identify potentials weaknesses
+                    in our application and report them to higher management
+                    before it causes any damages.
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon
                       icon="solar:shield-check-bold"
-                      className="text-blue-500 w-3 md:w-4 h-3 md:h-4"
+                      className="text-green-500 w-3 md:w-4 h-3 md:h-4"
                       width={16}
                       height={16}
                     />
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">
+                    <span className="font-semibold text-green-600 dark:text-green-400">
                       Quality Assurance Engineer
+                    </span>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-yellow-50/80 to-yellow-100/50 dark:from-yellow-950/30 dark:to-yellow-900/20 backdrop-blur-sm border border-green-200/50 dark:border-green-800/30 shadow-xl flex flex-col"
+                >
+                  <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
+                    <div className="p-2 md:p-3 bg-yellow-500 rounded-lg md:rounded-xl shadow-lg">
+                      <Icon
+                        icon="solar:dollar-bold"
+                        className="text-white w-5 md:w-6 h-5 md:h-6"
+                        width={24}
+                        height={24}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">
+                        Business Development Manager
+                      </h4>
+                      <p className="text-yellow-600 dark:text-yellow-400 font-medium text-sm md:text-base">
+                        Yash Furniture & Aluminium Section
+                      </p>
+                      {/* <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        2025 — Present
+                      </p> */}
+                    </div>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
+                    Drove business growth by acquiring clients, building relationships, and expanding market opportunities.
+                  </p>
+                  <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
+                    <Icon
+                      icon="solar:cup-star-bold"
+                      className="text-yellow-500 w-3 md:w-4 h-3 md:h-4"
+                      width={16}
+                      height={16}
+                    />
+                    <span className="font-semibold text-yellow-600 dark:text-yellow-400">
+                      Motivated • Reliable • Results-Oriented
                     </span>
                   </div>
                 </motion.div>
