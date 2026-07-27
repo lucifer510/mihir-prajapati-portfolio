@@ -3,137 +3,270 @@
 import { Icon } from "@iconify/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 
 type Certificate = {
   title: string;
+  provider: string;
   platform: string;
   issued: string;
   credentialId: string;
   skills: string[];
+  providerIcon: string;
+  providerIconSize: number;
   platformIcon: string;
   color: string;
-  certificatePreview: string;
   platformIconSize: number;
+  certificatePreview: string;
+  verificationLink: string;
 };
 
 const certifications: Certificate[] = [
   {
-  title: "Assets, Threats, and Vulnerabilities",
-  platform: "Google",
-  issued: "July, 2026",
-  credentialId: "IX41I50Y043H",
-  skills: [
-    "Threat Modeling",
-    "Vulnerability Assessment",
-    "Asset Management",
-    "Security Analysis"
-  ],
-  platformIcon: "logos:google",
-  color: "from-red-500 to-rose-600",
-  certificatePreview: "/certificates/Coursera_IX41I50Y043H_Assets_Threats_and_Vulnerabilities.jpg",
-  platformIconSize: 88
-},
+    title: "Google Cybersecurity Professional Certificate",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "YLLnNQ84",
+    skills: [
+      "Cybersecurity",
+      "Network Security",
+      "Python",
+      "Linux",
+      "SQL",
+      "SIEM",
+      "Incident Response",
+      "Threat Detection",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-amber-500 to-yellow-600",
+    certificatePreview:
+      "/certificates/Google_Cybersecurity_Professional_Certificate_v2.jpg",
+    verificationLink: "https://www.credly.com/go"
+  },
   {
-  title: "Tools of the Trade: Linux and SQL",
-  platform: "Google",
-  issued: "June, 2026",
-  credentialId: "28RYG0IHWY1R",
-  skills: [
-    "Linux",
-    "SQL",
-    "Command Line",
-    "Database Queries"
-  ],
-  platformIcon: "logos:google",
-  color: "from-orange-500 to-amber-600",
-  certificatePreview: "/certificates/Coursera_28RYG0IHWY1R_Tools_of_the_trade_Linux_and_SQL.jpg",
-  platformIconSize: 88
-},
+    title: "Accelerate Your Job Search with AI",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "ZFR1NYZZ30RT",
+    skills: [
+      "AI Tools",
+      "Job Search",
+      "Resume Optimization",
+      "Career Development",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-violet-500 to-purple-600",
+    certificatePreview:
+      "/certificates/Coursera_ZFR1NYZZ30RT_Accelerate_Your_Job_Search_With_AI.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
   {
-  title: "Connect and Protect: Networks and Network Security",
-  platform: "Google",
-  issued: "June, 2026",
-  credentialId: "BDPC1EZXJDI9",
-  skills: [
-    "Networking",
-    "Network Security",
-    "TCP/IP",
-    "Firewalls"
-  ],
-  platformIcon: "logos:google",
-  color: "from-cyan-500 to-blue-600",
-  certificatePreview: "/certificates/Coursera_BDPC1EZXJDI9_Connect_and_Protect_Networks_and_Network_Security.jpg",
-  platformIconSize: 88
-},
+    title: "Put It to Work: Prepare for Cybersecurity Jobs",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "PFYPJJ5CE4RF",
+    skills: [
+      "Career Preparation",
+      "Resume Building",
+      "Interview Preparation",
+      "Professional Development",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-indigo-500 to-blue-600",
+    certificatePreview:
+      "/certificates/Coursera_PFYPJJ5CE4RF_Put_It_To_Work_Prepare_For_Cybersecurity_Jobs.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
   {
-  title: "Play It Safe: Manage Security Risks",
-  platform: "Google",
-  issued: "May, 2026",
-  credentialId: "PWBOND4VKRCW",
-  skills: [
-    "Risk Assessment",
-    "Security Controls",
-    "Compliance",
-    "Incident Response"
-  ],
-  platformIcon: "logos:google",
-  color: "from-emerald-500 to-green-600",
-  certificatePreview: "/certificates/Coursera_PWBOND4VKRCW_Play_it_safe_Manage_security_risks.jpg",
-  platformIconSize: 88
-},
+    title: "Automate Cybersecurity Tasks with Python",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "M6MHP46XE5TI",
+    skills: [
+      "Python Automation",
+      "Security Automation",
+      "Linux",
+      "Cybersecurity Scripting",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-emerald-500 to-green-600",
+    certificatePreview:
+      "/certificates/Coursera_M6MHP46XE5TI_Automate_Cybersecurity_Tasks_With_Python.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
   {
-  title: "Foundations of Cybersecurity",
-  platform: "Google",
-  issued: "April, 2026",
-  credentialId: "297LQGJADXCC",
-  skills: [
-    "Cybersecurity",
-    "Security Principles",
-    "Risk Management",
-    "Threat Analysis"
-  ],
-  platformIcon: "logos:google",
-  color: "from-blue-500 to-indigo-600",
-  certificatePreview: "/certificates/Coursera_297LQGJADXCC_Foundations_of_Cybersecurity.jpg",
-  platformIconSize: 88
-},{
-  title: "Version Control with Git",
-  platform: "Atlassian",
-  issued: "April, 2026",
-  credentialId: "NFQ4KI8N5M59",
-  skills: [
-    "Git",
-    "Version Control",
-    "GitHub",
-    "Collaboration"
-  ],
-  platformIcon: "logos:atlassian",
-  color: "from-slate-500 to-gray-700",
-  certificatePreview: "/certificates/Coursera_NFQ4KI8N5M59_Version_Control_with_Git.jpg",
-  platformIconSize: 56
-},
+    title: "Sound the Alarm: Detection and Response",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "HA0QSCHCPAE7",
+    skills: [
+      "Incident Response",
+      "Threat Detection",
+      "Security Monitoring",
+      "Digital Forensics",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-red-500 to-orange-600",
+    certificatePreview:
+      "/certificates/Coursera_HA0QSCHCPAE7_Sound_The_Alarm_Detection_And_Response.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Assets, Threats, and Vulnerabilities",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "July, 2026",
+    credentialId: "IX41I50Y043H",
+    skills: [
+      "Threat Modeling",
+      "Vulnerability Assessment",
+      "Asset Management",
+      "Security Analysis",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-red-500 to-rose-600",
+    certificatePreview:
+      "/certificates/Coursera_IX41I50Y043H_Assets_Threats_and_Vulnerabilities.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Tools of the Trade: Linux and SQL",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "June, 2026",
+    credentialId: "28RYG0IHWY1R",
+    skills: ["Linux", "SQL", "Command Line", "Database Queries"],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-orange-500 to-amber-600",
+    certificatePreview:
+      "/certificates/Coursera_28RYG0IHWY1R_Tools_of_the_trade_Linux_and_SQL.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Connect and Protect: Networks and Network Security",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "June, 2026",
+    credentialId: "BDPC1EZXJDI9",
+    skills: ["Networking", "Network Security", "TCP/IP", "Firewalls"],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-cyan-500 to-blue-600",
+    certificatePreview:
+      "/certificates/Coursera_BDPC1EZXJDI9_Connect_and_Protect_Networks_and_Network_Security.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Play It Safe: Manage Security Risks",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "May, 2026",
+    credentialId: "PWBOND4VKRCW",
+    skills: [
+      "Risk Assessment",
+      "Security Controls",
+      "Compliance",
+      "Incident Response",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-emerald-500 to-green-600",
+    certificatePreview:
+      "/certificates/Coursera_PWBOND4VKRCW_Play_it_safe_Manage_security_risks.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Foundations of Cybersecurity",
+    provider: "Google",
+    platform: "Coursera",
+    issued: "April, 2026",
+    credentialId: "297LQGJADXCC",
+    skills: [
+      "Cybersecurity",
+      "Security Principles",
+      "Risk Management",
+      "Threat Analysis",
+    ],
+    providerIcon: "logos:google-icon",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 88,
+    color: "from-blue-500 to-indigo-600",
+    certificatePreview:
+      "/certificates/Coursera_297LQGJADXCC_Foundations_of_Cybersecurity.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
+  {
+    title: "Version Control with Git",
+    provider: "Atlassian",
+    platform: "Coursera",
+    issued: "April, 2026",
+    credentialId: "NFQ4KI8N5M59",
+    skills: ["Git", "Version Control", "GitHub", "Collaboration"],
+    providerIcon: "logos:atlassian",
+    providerIconSize: 40,
+    platformIcon: "logos:coursera",
+    platformIconSize: 80,
+    color: "from-slate-500 to-gray-700",
+    certificatePreview:
+      "/certificates/Coursera_NFQ4KI8N5M59_Version_Control_with_Git.jpg",
+    verificationLink: "https://www.coursera.org/account/accomplishments/verify"
+  },
   {
     title: "Jira Agile Fundamentals",
+    provider: "Udemy",
     platform: "Udemy",
     issued: "July, 2025",
     credentialId: "UC-7a1249c9-62f8-4525-b5d3-7eb55de4a580",
-    skills: [
-      "jira",
-      "agile project management",
-    ],
+    skills: ["jira", "agile project management"],
+    providerIcon: "logos:udemy-icon",
+    providerIconSize: 40,
     platformIcon: "logos:udemy",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/jira_essentials_udemy.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.udemy.com/certificate"
+
   },
   {
     title: "Power BI Essential Training (2022)",
+    provider: "Linkedin Learning",
     platform: "Linkedin Learning",
     issued: "June, 2025",
-    credentialId: "b54b5a3d6aa94b5ba3ccf84b3d8e777869cc231922ba072b6be01c651ebfc5dc",
+    credentialId:
+      "b54b5a3d6aa94b5ba3ccf84b3d8e777869cc231922ba072b6be01c651ebfc5dc",
     skills: [
       "microsoft power bi",
       "microsoft fabric",
@@ -141,33 +274,42 @@ const certifications: Certificate[] = [
       "data science",
       "data analysis",
       "data cleaning",
-      "data visualization"
+      "data visualization",
     ],
+    providerIcon: "logos:linkedin-icon",
+    providerIconSize: 40,
     platformIcon: "logos:linkedin",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/powerbi_training_linkedin.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.linkedin.com/learning/certificates"
   },
   {
     title: "Prompt Engineering: How to Talk to the AIs",
+    provider: "Linkedin Learning",
     platform: "Linkedin Learning",
     issued: "May, 2025",
-    credentialId: "0481b0547e8ff89b9897b47d6f1a63fbc6b8b5ab83125c265879e7b8e315b73c",
+    credentialId:
+      "0481b0547e8ff89b9897b47d6f1a63fbc6b8b5ab83125c265879e7b8e315b73c",
     skills: [
       "Large Language Models(LLM)",
       "Generative AI",
       "Prompt Engineering",
     ],
+    providerIcon: "logos:linkedin-icon",
+    providerIconSize: 40,
     platformIcon: "logos:linkedin",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/prompt_engineering_linkedin.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.linkedin.com/learning/certificates"
   },
   {
     title: "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+    provider: "ZTM",
     platform: "Udemy",
     issued: "September, 2023",
-    credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
+    credentialId: "UC-29999a12-ed0f-4d23-a113-c3e042186d61",
     skills: [
       "UI/UX Design",
       "Figma",
@@ -178,15 +320,19 @@ const certifications: Certificate[] = [
       "HTML5",
       "CSS3",
       "Accessibility",
-      "Typography"
+      "Typography",
     ],
+    providerIcon: "logos:udemy-icon",
+    providerIconSize: 40,
     platformIcon: "logos:udemy",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/uiux_udemy.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.udemy.com/certificate"
   },
   {
     title: "Complete Web Development",
+    provider: "ZTM",
     platform: "Udemy",
     issued: "August, 2023",
     credentialId: "UC-04bbec20-ea1a-4b04-bd7f-b5ad6b6f0ef5/",
@@ -205,48 +351,52 @@ const certifications: Certificate[] = [
       "PostgresSQL",
       "Scalability",
       "Security",
-      "Production and Deployment"
+      "Production and Deployment",
     ],
+    providerIcon: "logos:udemy-icon",
+    providerIconSize: 40,
     platformIcon: "logos:udemy",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/web_developer_udemy_certificate.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.udemy.com/certificate"
   },
   {
     title: "CSS, Bootstrap, and Javascript Web Development Course ",
+    provider: "Udemy",
     platform: "Udemy",
     issued: "February, 2023",
     credentialId: "UC-3b45969c-a9a1-4eec-a5c4-a17ee2594b04",
-    skills: [
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "Styling",
-    ],
+    skills: ["CSS", "Bootstrap", "Javascript", "Styling"],
+    providerIcon: "logos:udemy-icon",
+    providerIconSize: 40,
     platformIcon: "logos:udemy",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
-    certificatePreview: "/certificates/CSS_Javascript_Boostrap_udemy_certificate.jpg",
-    platformIconSize: 88
+    certificatePreview:
+      "/certificates/CSS_Javascript_Boostrap_udemy_certificate.jpg",
+    verificationLink: "https://www.udemy.com/certificate"
   },
   {
     title: "HTML5 - From Basics to Advanced level",
+    provider: "Udemy",
     platform: "Udemy",
     issued: "February, 2023",
     credentialId: "UC-008f31ac-b4e0-4e24-a5f6-039a7f4cd7c4",
-    skills: [
-      "HTML/HTML5",
-      "Semantic UI"
-    ],
+    skills: ["HTML/HTML5", "Semantic UI"],
+    providerIcon: "logos:udemy-icon",
+    providerIconSize: 40,
     platformIcon: "logos:udemy",
+    platformIconSize: 88,
     color: "from-blue-500 to-blue-600",
     certificatePreview: "/certificates/html_udemy.jpg",
-    platformIconSize: 88
+    verificationLink: "https://www.udemy.com/certificate"
   }
-];
-
+]
 
 export default function CertificationsSection() {
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const [selectedCertificate, setSelectedCertificate] =
+    useState<Certificate | null>(null);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -340,25 +490,45 @@ export default function CertificationsSection() {
                 whileHover={{
                   y: -8,
                   scale: 1.02,
-                  transition: { duration: 0.3, ease: "easeOut" }
+                  transition: { duration: 0.3, ease: "easeOut" },
                 }}
                 className="group h-full"
               >
                 <div className="h-full bg-white/70 dark:bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-300 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all duration-300 overflow-hidden">
-
                   {/* Header with gradient - keeping this as requested */}
-                  <div className={`h-20 flex items-center justify-between bg-slate-100 dark:bg-slate-900 px-4 ${cert.color} relative overflow-hidden`}>
+                  <div
+                    className={`h-20 flex items-center justify-between bg-slate-100 dark:bg-slate-900 px-4 ${cert.color} relative overflow-hidden`}
+                  >
                     <div className="flex items-center justify-end mr-4 gap-1">
-                      {/* <Icon icon={cert.providerIcon} className="" width={cert.providerIconSize} height={cert.providerIconSize} />
-                      <span className="text-black dark:text-white text-sm font-bold">×</span> */}
-                      <Icon icon={cert.platformIcon} className="" width={cert.platformIconSize} height={cert.platformIconSize} />
+                      <Icon
+                        icon={cert.providerIcon}
+                        className=""
+                        width={cert.providerIconSize}
+                        height={cert.providerIconSize}
+                      />
+                      <span className="text-black dark:text-white text-sm font-bold">
+                        ×
+                      </span>
+                      <Icon
+                        icon={cert.platformIcon}
+                        className=""
+                        width={cert.platformIconSize}
+                        height={cert.platformIconSize}
+                      />
                     </div>
                     <div className="flex items-center justify-start gap-0">
                       <div className="relative w-8 h-8 rounded-lg flex items-center justify-center">
                         <div className="absolute top-1/5 left-1/4 w-1/2 h-1/2 bg-white rounded-lg -z-0"></div>
-                        <Icon icon="solar:verified-check-bold" className="text-blue-500 z-10" width={26} height={26} />
+                        <Icon
+                          icon="solar:verified-check-bold"
+                          className="text-blue-500 z-10"
+                          width={26}
+                          height={26}
+                        />
                       </div>
-                      <span className="text-blue-500 text-sm font-medium">Verified</span>
+                      <span className="text-blue-500 text-sm font-medium">
+                        Verified
+                      </span>
                     </div>
                   </div>
 
@@ -374,26 +544,44 @@ export default function CertificationsSection() {
 
                     {/* Provider Info */}
                     <div className="space-y-3 mb-6 bg-gray-50/50 dark:bg-gray-800/30 rounded-xl p-4 border border-gray-200/50 dark:border-gray-700/30">
-                      {/* <div className="flex items-center gap-3 text-sm">
+                      <div className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-md flex items-center justify-center">
                           <Icon icon="solar:buildings-2-bold" className="text-white" width={12} height={12} />
                         </div>
                         <span className="text-gray-600 dark:text-gray-400 font-medium">Provider:</span>
                         <span className="font-semibold text-gray-900 dark:text-white">{cert.provider}</span>
-                      </div> */}
+                      </div>
                       <div className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-purple-600 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:monitor-smartphone-bold" className="text-white" width={12} height={12} />
+                          <Icon
+                            icon="solar:monitor-smartphone-bold"
+                            className="text-white"
+                            width={12}
+                            height={12}
+                          />
                         </div>
-                        <span className="text-gray-600 dark:text-gray-400 font-medium">Platform:</span>
-                        <span className="font-semibold text-blue-600 dark:text-blue-400">{cert.platform}</span>
+                        <span className="text-gray-600 dark:text-gray-400 font-medium">
+                          Platform:
+                        </span>
+                        <span className="font-semibold text-blue-600 dark:text-blue-400">
+                          {cert.platform}
+                        </span>
                       </div>
                       <div className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-gradient-to-r from-green-500 to-green-600 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:calendar-bold" className="text-white" width={12} height={12} />
+                          <Icon
+                            icon="solar:calendar-bold"
+                            className="text-white"
+                            width={12}
+                            height={12}
+                          />
                         </div>
-                        <span className="text-gray-600 dark:text-gray-400 font-medium">Issued:</span>
-                        <span className="font-semibold text-gray-700 dark:text-gray-300">{cert.issued}</span>
+                        <span className="text-gray-600 dark:text-gray-400 font-medium">
+                          Issued:
+                        </span>
+                        <span className="font-semibold text-gray-700 dark:text-gray-300">
+                          {cert.issued}
+                        </span>
                       </div>
                     </div>
 
@@ -401,7 +589,12 @@ export default function CertificationsSection() {
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-3">
                         <div className="w-4 h-4 bg-gradient-to-r from-amber-500 to-orange-500 rounded-md flex items-center justify-center">
-                          <Icon icon="solar:star-bold" className="text-white" width={10} height={10} />
+                          <Icon
+                            icon="solar:star-bold"
+                            className="text-white"
+                            width={10}
+                            height={10}
+                          />
                         </div>
                         <h4 className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide">
                           Skills Validated
@@ -421,19 +614,24 @@ export default function CertificationsSection() {
 
                     {/* Credential ID */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-200/60 dark:border-gray-700/50">
-                      {/* <Link
-                        href={`https://www.Google.org/verify/${cert.credentialId}`}
+                      <Link
+                        href={`${cert.verificationLink}/${cert.credentialId}`}
                         target="_blank"
                       // rel="noopener noreferrer"
                       >
                         <div className="flex items-center gap-2">
                           <Icon icon="solar:arrow-right-up-bold" className="text-green-500" width={14} height={14} />
                           <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                            ID: <span className="text-gray-700 dark:text-gray-300 font-mono">{cert.credentialId}</span>
+                            ID: <span className="text-gray-700 dark:text-gray-300 font-mono">
+                              {/* If credential Id's length is more than 12 characters, then only last 12 characters will be displayed on certificate card. */}
+                              {cert.credentialId.length > 12
+                                ? cert.credentialId.slice(-12)
+                                : cert.credentialId}
+                            </span>
                           </span>
                           <Icon icon="solar:link-bold" className="text-gray-500" width={14} height={14} />
                         </div>
-                      </Link> */}
+                      </Link>
                       <button
                         className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 rounded-lg border border-blue-200/60 dark:border-blue-700/50 hover:border-blue-300/80 dark:hover:border-blue-600/70 hover:from-blue-100 hover:to-blue-200 dark:hover:from-blue-800/30 dark:hover:to-blue-700/30 transition-all duration-300 text-xs font-medium shadow-sm hover:shadow-md"
                         onClick={() => setSelectedCertificate(cert)}
@@ -462,15 +660,25 @@ export default function CertificationsSection() {
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl shadow-md">
-                  <Icon icon="solar:star-outline" className="text-white" width={18} height={18} />
+                  <Icon
+                    icon="solar:star-outline"
+                    className="text-white"
+                    width={18}
+                    height={18}
+                  />
                 </div>
                 <span className="text-blue-700 dark:text-blue-300 text-sm md:text-base font-semibold">
-                  13 Professional Certifications
+                  {certifications.length} Professional Certifications
                 </span>
               </div>
               <div className="w-px h-6 bg-gradient-to-b from-blue-300/50 via-purple-300/50 to-blue-300/50"></div>
               <div className="flex items-center gap-3">
-                <Icon icon="solar:verified-check-bold" className="text-blue-500" width={22} height={22} />
+                <Icon
+                  icon="solar:verified-check-bold"
+                  className="text-blue-500"
+                  width={22}
+                  height={22}
+                />
                 <span className="text-gray-600 dark:text-gray-400 text-sm md:text-base font-medium">
                   Verified by Industry Leaders
                 </span>
@@ -505,17 +713,23 @@ export default function CertificationsSection() {
                     {selectedCertificate.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base">
-                    {selectedCertificate.platform} • {selectedCertificate.issued}
+                    {selectedCertificate.platform} •{" "}
+                    {selectedCertificate.issued}
                   </p>
                 </div>
-                <motion.button
+                {/* <motion.button
                   whileHover={{ scale: 1.1, rotate: 90 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setSelectedCertificate(null)}
-                  className="p-3 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-xl transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50"
+                  className="p-3 hover:bg-gray-100/80 dark:hover:bg-gray-800/80 rounded-2xl transition-smooth duration-150 border border-gray-200/50 dark:border-gray-700/80"
                 >
-                  <Icon icon="solar:close-outline" className="text-gray-500" width={20} height={20} />
-                </motion.button>
+                  <Icon
+                    icon="solar:close-circle-outline"
+                    className="text-red-500"
+                    width={24}
+                    height={24}
+                  />
+                </motion.button> */}
               </div>
 
               {/* Certificate Image */}
@@ -527,7 +741,7 @@ export default function CertificationsSection() {
                     width={800}
                     height={600}
                     className="w-full h-auto"
-                    style={{ objectFit: 'contain' }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>
@@ -535,7 +749,10 @@ export default function CertificationsSection() {
               {/* Modal Footer */}
               <div className="flex items-center justify-between p-6 border-t border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
                 <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                  Credential ID: <span className="text-gray-800 dark:text-gray-200">{selectedCertificate.credentialId}</span>
+                  Credential ID:{" "}
+                  <span className="text-gray-800 dark:text-gray-200">
+                    {selectedCertificate.credentialId}
+                  </span>
                 </div>
                 <div className="flex gap-3">
                   <motion.button
@@ -544,7 +761,12 @@ export default function CertificationsSection() {
                     onClick={() => setSelectedCertificate(null)}
                     className="px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-xl transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl border border-red-500/50"
                   >
-                    <Icon icon="solar:close-circle-bold" className="text-white" width={20} height={20} />
+                    <Icon
+                      icon="solar:close-circle-bold"
+                      className="text-white"
+                      width={20}
+                      height={20}
+                    />
                     Close
                   </motion.button>
                   <motion.a
@@ -565,4 +787,4 @@ export default function CertificationsSection() {
       </AnimatePresence>
     </>
   );
-} 
+}
