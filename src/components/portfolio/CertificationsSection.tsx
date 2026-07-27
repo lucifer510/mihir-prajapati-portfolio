@@ -67,7 +67,7 @@ const certifications: Certificate[] = [
     platformIconSize: 88,
     color: "from-violet-500 to-purple-600",
     certificatePreview:
-      "/certificates/Coursera_ZFR1NYZZ30RT_Accelerate_Your_Job_Search_With_AI.jpg",
+      "/certificates/Coursera_Zfr1nyzz30rt_Accelerate_Your_Job_Search_With_Ai.jpg",
     verificationLink: "https://www.coursera.org/account/accomplishments/verify"
   },
   {
@@ -88,7 +88,7 @@ const certifications: Certificate[] = [
     platformIconSize: 88,
     color: "from-indigo-500 to-blue-600",
     certificatePreview:
-      "/certificates/Coursera_PFYPJJ5CE4RF_Put_It_To_Work_Prepare_For_Cybersecurity_Jobs.jpg",
+      "/certificates/Coursera_Pfypjj5ce4rf_Put_It_To_Work_Prepare_For_Cybersecurity_Jobs.jpg",
     verificationLink: "https://www.coursera.org/account/accomplishments/verify"
   },
   {
@@ -109,7 +109,7 @@ const certifications: Certificate[] = [
     platformIconSize: 88,
     color: "from-emerald-500 to-green-600",
     certificatePreview:
-      "/certificates/Coursera_M6MHP46XE5TI_Automate_Cybersecurity_Tasks_With_Python.jpg",
+      "/certificates/Coursera_M6mhp46xe5ti_Automate_Cybersecurity_Tasks_With_Python.jpg",
     verificationLink: "https://www.coursera.org/account/accomplishments/verify"
   },
   {
@@ -130,7 +130,7 @@ const certifications: Certificate[] = [
     platformIconSize: 88,
     color: "from-red-500 to-orange-600",
     certificatePreview:
-      "/certificates/Coursera_HA0QSCHCPAE7_Sound_The_Alarm_Detection_And_Response.jpg",
+      "/certificates/Coursera_Ha0qschcpae7_Sound_The_Alarm_Detection_And_Response.jpg",
     verificationLink: "https://www.coursera.org/account/accomplishments/verify"
   },
   {
